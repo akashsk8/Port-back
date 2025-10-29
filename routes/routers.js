@@ -98,7 +98,7 @@ router.post('/Send', async (req,res)=>{
   try{
     const {Name,Email,Message} = req.body;
     await Contact(Name,Email,Message);
-    res.redirect('http://https://port-front-ebon.vercel.app/contact');
+    res.redirect('http://https://jumman.vercel.app/contact');
   }
   catch(error){
     res.status(500).json({ error: 'Failed to send contact message' });
