@@ -98,6 +98,7 @@ router.post('/Send', async (req,res)=>{
   try{
     const {Name,Email,Message} = req.body;
     await Contact(Name,Email,Message);
+    res.status(201)
   }
   catch(error){
     res.status(500).json({ error: 'Failed to send contact message' });
